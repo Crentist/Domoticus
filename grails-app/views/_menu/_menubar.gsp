@@ -8,6 +8,5 @@
 				</g:link>
 			</li>
 		</g:each>
-		
 	</ul>
 </div>

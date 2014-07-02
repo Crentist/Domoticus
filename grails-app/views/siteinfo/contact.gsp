@@ -22,8 +22,8 @@
 			<h1><g:message code="default.contact.address"/></h1>
 				<address>
 					<strong>${meta(name:'app.name')}, Inc.</strong><br>
-					 123 Future Ave<br>
-					 San Francisco, CA 94107<br>
+					 50 y 120<br>
+					 La Plata, Buenos Aires 1900<br>
 					 <br>
 				</address>
 				<address>
@@ -32,7 +32,7 @@
 							<strong><abbr title="Phone">Phone</abbr></strong>
 						</span>
 						<span class="col-md-8">
-							(123) 456-7890
+							(221) 456-7890
 						</span>
 					</div>
 					<div class="row">
@@ -40,7 +40,7 @@
 							<strong><abbr title="Fax">Fax</abbr></strong>
 						</span>
 						<span class="col-md-8">
-					    +49 (0) 72 27 - 95 35 - 605
+					    +54 (0) 72 27 - 95 35 - 605
 						</span>
 					</div>
 				</address>
@@ -58,7 +58,7 @@
 			
 			<div class="col-md-8">
 				<iframe width="100%" scrolling="no" height="300" frameborder="0" 
-					src="http://maps.google.ca/maps?f=q&source=s_q&hl=en&geocode=&q=123+Future+Ave,San+Francisco,+CA+94107&ie=UTF8&hq=&hnear=Downtown,San+Francisco,+CA+94107&z=12&iwloc=near&output=embed"
+					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3272.1182850207933!2d-57.937847!3d-34.903481000000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9191a5ff1fbbe5d5!2sFacultad+de+Inform%C3%A1tica+La+Plata+(UNLP)!5e0!3m2!1ses!2sar!4v1404324756177"
 		 			marginwidth="0" marginheight="0"></iframe>
 			</div>
 		</div>
