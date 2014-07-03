@@ -7,42 +7,7 @@
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'temperatura.label', default: 'Temperatura')}" />
 	<title><g:message code="default.index.label" args="[entityName]" /></title>
-    <script type="text/javascript"
-    src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js">
-    </script>
-    <script type="text/javascript">
-        $(function() {
-            var cnt = 0;
-            var counter = setInterval(function() {
-                if (cnt < 20) {
-                    $('#displayCounter').html(data);
-                    cnt++;
-                }
-                else {
-                    clearInterval(counter);
-                    $('#displayCounter').html("Timeout!!");
-                }
-            }, 1000);
-            
-
-        });
-        
-        
-            $.ajax({
-		    url:"${g.createLink(controller:'temperatura',action:'getJson')}",
-		    dataType: 'string',
-		    data: {date: 'date'},
-		    success: function(data) {
-		        alert(data)
-		    },
-		    error: function(request, status, error) {
-		        alert(error)
-		    },
-		    complete: function() {
-		    }
-		});          
-           
-    </script>	
+	
 </head>
 
 <body>
@@ -61,6 +26,29 @@
 			
 			</tr>
 		</g:each>--%>
+		
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"><\script>
+<script type="text/javascript">
+function showGetResult( name )
+{
+     var result = null;
+     jQuery.ajax({
+        url: 'http://localhost:8080/temperatura/index',
+        type: 'get',
+        dataType: 'text/html',
+        success:function(data)
+        {
+            alert(data);
+            document.write(data);
+        } 
+     });
+     return result;
+}
+
+//document.write(showGetResult('test'));
+showGetResult('test');
+</script>
 		</tbody>
 	</table>
 	<div id="displayCounter"></div>

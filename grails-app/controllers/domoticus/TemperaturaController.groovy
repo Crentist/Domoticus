@@ -2,6 +2,7 @@ package domoticus
 
 
 import grails.converters.JSON
+import sensors.Temperature
 
 /**
  * TemperaturaController
@@ -10,16 +11,20 @@ import grails.converters.JSON
 class TemperaturaController {
 
 	static scaffold = true
+	def t = new Temperatura()
 
 	def index() {
 		
-		render (view: "index.gsp")
+		//render (view: "index.gsp")
+		//render "hola"
+		t.start()
+		render t.getTemp()
 	}
 	
-	def getJson() {
+	def show() {
 		
 		def date = new Date()
 		def hola = "GGG"
-		return hola
+		render (view: "index.gsp")
 	}
 }

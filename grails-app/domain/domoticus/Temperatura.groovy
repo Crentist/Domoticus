@@ -19,6 +19,8 @@ class Temperatura {
 //	static	hasMany		= []	// tells GORM to associate other domain objects for a 1-n or n-m mapping
 //	static	mappedBy	= []	// specifies which property should be used in a mapping 
 	
+	def temp;
+	
     static	mapping = {
     }
     
@@ -30,6 +32,25 @@ class Temperatura {
 	 */
 //	@Override	// Override toString for a nicer / more descriptive UI 
 	public String toString() {
-		return "Temperatura ambiental";
+		return "Temperatura ambiental"
+	}
+	
+	def start(){
+		println("probando")
+		runAsync {
+			println("probando2222")
+			//Temperature.getValue(this)
+		}
+	}
+	
+	def setTemp(String t){
+		println("seteando temp")
+		println(t)
+		this.temp = t;
+	}
+	
+	def getTemp(){
+		println("get temp")
+		return temp;
 	}
 }
