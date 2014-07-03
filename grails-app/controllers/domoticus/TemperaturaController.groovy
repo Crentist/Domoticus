@@ -1,5 +1,8 @@
 package domoticus
 
+
+import grails.converters.JSON
+
 /**
  * TemperaturaController
  * A controller class handles incoming web requests and performs actions such as redirects, rendering views and so on.
@@ -10,6 +13,13 @@ class TemperaturaController {
 
 	def index() {
 		
-		render "hola"
+		render (view: "index.gsp")
+	}
+	
+	def getJson() {
+		
+		def date = new Date()
+		def hola = "GGG"
+		return hola
 	}
 }
